@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function App() {
   const canvasRef = useRef();
-  const [triangle, setTriangle] = useState({ x: 200, y: 200, height: 100, length: 50, show: false }); // Added height and length
+  const [triangle, setTriangle] = useState({ x: 200, y: 200, height: 100, length: 50, show: false }); 
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
@@ -46,7 +46,7 @@ function App() {
   }
 
   function isInsideTriangle(mouseX, mouseY) {
-       // Check within a rectangle containing the triangle
+
         const minX = Math.min(triangle.x - triangle.length, triangle.x, triangle.x + triangle.length);
         const maxX = Math.max(triangle.x - triangle.length, triangle.x, triangle.x + triangle.length);
         const minY = Math.min(triangle.y, triangle.y + triangle.height);
